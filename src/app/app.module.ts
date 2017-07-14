@@ -8,7 +8,6 @@ import { LessonComponent } from './lesson/lesson.component';
 import { CourseComponent } from './course/course.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
-import { LessonItemComponent } from './lesson/lesson-list/lesson-item/lesson-item.component';
 import { LessonListComponent } from './lesson/lesson-list/lesson-list.component';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { LessonListComponent } from './lesson/lesson-list/lesson-list.component'
     CourseComponent,
     ProfileComponent,
     HomeComponent,
-    LessonItemComponent,
     LessonListComponent
   ],
   imports: [
