@@ -1,24 +1,8 @@
-
-
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-
-<div *ngIf="mashow">
-  <h2>Here are some links to help you start: </h2>
-  <ul>
-    <li>
-      <h2><a>Tour of Heroes</a></h2>
-    </li>
-    <li>
-      <h2><a>CLI Documentation</a></h2>
-    </li>
-    <li>
-      <h2><a>Angular blog</a></h2>
-    </li>
-  </ul>
-</div>
-
-<button class="button" (click)="maClick()">Click me!</button>
-
-
+<app-header></app-header>
+<section class="section">
+  <div class="container">
+    <app-lesson></app-lesson>
+    <app-course></app-course>
+    <app-home></app-home>
+  </div>
+</section>
