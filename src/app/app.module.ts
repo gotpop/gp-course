@@ -9,6 +9,7 @@ import { CourseComponent } from './course/course.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { LessonListComponent } from './lesson/lesson-list/lesson-list.component';
+import { LessonItemComponent } from './lesson/lesson/lesson-list/lesson-item/lesson-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LessonListComponent } from './lesson/lesson-list/lesson-list.component'
     CourseComponent,
     ProfileComponent,
     HomeComponent,
-    LessonListComponent
+    LessonListComponent,
+    LessonItemComponent
   ],
   imports: [
     BrowserModule
