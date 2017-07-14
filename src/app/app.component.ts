@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  mashow = false
+  mashow = false;
   maClick() {
-      console.log('Ma click"')
-      let ma = this.mashow
-        this.mashow = !ma
+    console.log('Ma click"');
+    const ma = this.mashow;
+    this.mashow = !ma
   }
 }
