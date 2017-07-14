@@ -9,7 +9,7 @@ import { CourseComponent } from './course/course.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { LessonListComponent } from './lesson/lesson-list/lesson-list.component';
-import { LessonItemComponent } from './lesson/lesson-list/lesson-item/lesson-item.component';
+import { LessonItemDetailComponent } from './lesson/lesson-item-detail/lesson-item-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { LessonItemComponent } from './lesson/lesson-list/lesson-item/lesson-ite
     ProfileComponent,
     HomeComponent,
     LessonListComponent,
-    LessonItemComponent
+    LessonItemDetailComponent
   ],
   imports: [
     BrowserModule
