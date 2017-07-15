@@ -3,8 +3,8 @@
     <button class="button is-success">New Lesson</button>
   </div>
 </div>
-<div class="columns">
-  <div class="column" *ngFor="let lesson of lessons">
+<div class="columns" *ngFor="let lesson of lessons">
+  <div class="column">
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
@@ -22,7 +22,7 @@
         </div>
       </div>
       <footer class="card-footer">
-        <a class="card-footer-item">Save</a>
+        <a class="card-footer-item">Add item</a>
         <a class="card-footer-item">Edit</a>
         <a class="card-footer-item">Delete</a>
       </footer>
