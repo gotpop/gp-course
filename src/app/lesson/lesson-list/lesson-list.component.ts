@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Lesson} from '../../shared/lesson.model';
+import {LessonService} from '../../shared/lesson.service';
 
 @Component({
   selector: 'app-lesson-list',
@@ -7,11 +8,15 @@ import {Lesson} from '../../shared/lesson.model';
   styleUrls: ['./lesson-list.component.scss']
 })
 export class LessonListComponent implements OnInit {
-  public lessons: Lesson[] = [];
-  constructor() {}
-  ngOnInit() {}
+  lessons: Lesson[];
+  constructor(private lessonService: LessonService) {
+  }
+
+  ngOnInit() {
+    this.lessons = this.lessonService.getLessons();
+  }
 
   addNewLesson() {
-    this.lessons.push(new Lesson('Animals', 'This is a new animal lesson', 'Test'))
+    // this.lessons.push(new Lesson('Animals', 'This is a new animal lesson', 'Test'))
   }
 }
