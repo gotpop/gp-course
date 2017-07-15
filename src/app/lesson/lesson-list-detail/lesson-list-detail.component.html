@@ -13,7 +13,11 @@
       </header>
       <div class="card-content">
         <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto debitis saepe tempora! Aliquid assumenda eius eum facilis, itaque iure laudantium magni neque, odit provident quidem rem repudiandae sapiente sit, voluptate.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <hr>
+          <ul>
+            <li *ngFor="let item of lessonItems">{{item.name}}</li>
+          </ul>
         </div>
       </div>
       <footer class="card-footer">
