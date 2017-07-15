@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {LessonService} from '../../../shared/lesson.service';
 
 @Component({
   selector: 'app-lesson-item',
@@ -7,9 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LessonItemComponent implements OnInit {
  @Input() thisLesson: {name: string, description: string, imagePath: string};
-  constructor() { }
+  constructor(private lessonService: LessonService) { }
 
   ngOnInit() {
   }
 
+  onClick() {
+    console.log('Clciked yay!')
+    this.lessonService.lessonSelected.emit(this.thisLesson);
+  }
 }
