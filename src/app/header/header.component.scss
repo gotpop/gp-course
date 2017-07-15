@@ -1,4 +1,10 @@
 
 .navbar {
   background: #0e629e;
+  a {
+    color: aliceblue;
+    &:hover {
+      color: #0e629e;
+    }
+  }
 }
