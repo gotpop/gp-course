@@ -7,8 +7,9 @@ import {Lesson} from '../../shared/lesson.model';
   styleUrls: ['./lesson-list.component.scss']
 })
 export class LessonListComponent implements OnInit {
-  lessons: Lesson[] = [
-    new Lesson('Test', 'Test', 'Test')
+  public lessons: Lesson[] = [
+    new Lesson('Animals', 'This is a new animal lesson', 'Test'),
+    new Lesson('Robots', 'This is a new robot lesson', 'Test')
   ];
   constructor() {
     console.log(this.lessons, 'lessonita')
