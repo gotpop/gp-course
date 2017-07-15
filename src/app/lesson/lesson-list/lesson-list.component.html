@@ -3,26 +3,7 @@
     <button class="button is-success">New Lesson</button>
   </div>
 </div>
-<div class="columns" *ngFor="let lesson of lessons">
-  <div class="column">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          {{lesson.name}}
-        </p>
-        <a class="card-header-icon">
-        <span class="icon">
-          <i class="fa fa-angle-down"></i>
-        </span>
-        </a>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          {{lesson.description}}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<app-lesson-item
+  *ngFor="let lesson of lessons" [thisLesson]="lesson"></app-lesson-item>
 
 

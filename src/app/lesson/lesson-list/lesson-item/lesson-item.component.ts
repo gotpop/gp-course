@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lesson-item',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lesson-item.component.scss']
 })
 export class LessonItemComponent implements OnInit {
-
+ @Input() thisLesson: {name: string, description: string, imagePath: string};
   constructor() { }
 
   ngOnInit() {
