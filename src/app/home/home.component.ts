@@ -1,5 +1,6 @@
 import {Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -19,9 +20,11 @@ export class HomeComponent implements OnInit {
 
   onLogIn() {
     console.log('Logged in!')
+    this.authService.login();
   }
 
   onLogOut() {
     console.log('Logged out!')
+    this.authService.logout();
   }
 }
