@@ -25,6 +25,7 @@ export class LessonItemComponent implements OnInit {
   }
 
   viewSingle() {
+    this.lessonService.lessonSelected.emit(this.thisLesson);
     this.router.navigate([this.thisLesson.name], {relativeTo: this.route} )
   }
 }

@@ -16,4 +16,12 @@ export class HomeComponent implements OnInit {
   goLessons() {
     this.router.navigate(['lesson'])
   }
+
+  onLogIn() {
+    console.log('Logged in!')
+  }
+
+  onLogOut() {
+    console.log('Logged out!')
+  }
 }
