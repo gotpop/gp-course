@@ -15,6 +15,7 @@ import { CourseEditComponent } from './course/course-edit/course-edit.component'
 import {LessonService} from './shared/lesson.service';
 import {RouterModule, Routes} from '@angular/router';
 import { LessonListDetailSingleComponent } from './lesson/lesson-list-detail-single/lesson-list-detail-single.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     LessonListDetailComponent,
     LessonItemComponent,
     CourseEditComponent,
-    LessonListDetailSingleComponent
+    LessonListDetailSingleComponent,
+    PageNotFoundComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
