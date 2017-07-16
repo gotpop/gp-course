@@ -7,5 +7,9 @@
       color: #0e629e;
       background: #fff;
     }
+    &.is-active {
+      background: #eee;
+      color: #0e629e;
+    }
   }
 }
