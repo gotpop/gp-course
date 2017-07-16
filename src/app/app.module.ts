@@ -16,8 +16,8 @@ import { CourseEditComponent } from './course/course-edit/course-edit.component'
 import {LessonService} from './shared/lesson.service';
 import { LessonListDetailSingleComponent } from './lesson/lesson-list-detail-single/lesson-list-detail-single.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-
+import {AuthService} from './auth.service';
+import {AuthGuard} from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [LessonService],
+  providers: [LessonService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
