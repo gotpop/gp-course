@@ -1,6 +1,6 @@
 <div class="columns" >
   <div class="column">
-    <div class="card" (click)="onClick()">
+    <div class="card">
       <header class="card-header">
         <p class="card-header-title">
           {{thisLesson.name}}
@@ -16,6 +16,10 @@
           {{thisLesson.description}}
         </div>
       </div>
+      <footer class="card-footer">
+        <a class="card-footer-item" (click)="onClick()">View Local</a>
+        <a class="card-footer-item" (click)="viewSingle()">View single</a>
+      </footer>
     </div>
   </div>
 </div>

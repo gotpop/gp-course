@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {LessonService} from '../../../shared/lesson.service';
 import {LessonItem} from '../../../shared/lessonItem.model'
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-lesson-item',
@@ -9,7 +10,11 @@ import {LessonItem} from '../../../shared/lessonItem.model'
 })
 export class LessonItemComponent implements OnInit {
  @Input() thisLesson: {name: string, description: string, imagePath: string, lessonItems: LessonItem[]};
-  constructor(private lessonService: LessonService) { }
+  constructor(
+    private lessonService: LessonService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
   }
@@ -17,5 +22,9 @@ export class LessonItemComponent implements OnInit {
   onClick() {
     // console.log('Clicked yay!', this.thisLesson)
     this.lessonService.lessonSelected.emit(this.thisLesson);
+  }
+
+  viewSingle() {
+    this.router.navigate([this.thisLesson.name], {relativeTo: this.route} )
   }
 }

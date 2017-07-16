@@ -14,10 +14,12 @@ import { LessonItemComponent } from './lesson/lesson-list/lesson-item/lesson-ite
 import { CourseEditComponent } from './course/course-edit/course-edit.component';
 import {LessonService} from './shared/lesson.service';
 import {RouterModule, Routes} from '@angular/router';
+import { LessonListDetailSingleComponent } from './lesson/lesson-list-detail-single/lesson-list-detail-single.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'lesson', component: LessonComponent },
+  { path: 'lesson/:id', component: LessonListDetailSingleComponent },
   { path: 'course', component: CourseComponent },
   { path: 'profile', component: ProfileComponent}
 ];
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     LessonListComponent,
     LessonListDetailComponent,
     LessonItemComponent,
-    CourseEditComponent
+    CourseEditComponent,
+    LessonListDetailSingleComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
