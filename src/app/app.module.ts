@@ -13,6 +13,15 @@ import { LessonListDetailComponent } from './lesson/lesson-list-detail/lesson-li
 import { LessonItemComponent } from './lesson/lesson-list/lesson-item/lesson-item.component';
 import { CourseEditComponent } from './course/course-edit/course-edit.component';
 import {LessonService} from './shared/lesson.service';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'lesson', component: LessonComponent },
+  { path: 'course', component: CourseComponent },
+  { path: 'profile', component: ProfileComponent}
+];
+
 
 @NgModule({
   declarations: [
@@ -29,6 +38,7 @@ import {LessonService} from './shared/lesson.service';
     CourseEditComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule
   ],
   providers: [LessonService],
