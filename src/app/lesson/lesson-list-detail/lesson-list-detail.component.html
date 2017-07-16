@@ -3,7 +3,7 @@
     <div class="card">
       <header class="card-header">
         <p class="card-header-title">
-          Lesson name {{thisLesson}}
+          {{thisLesson.name}}
         </p>
         <a class="card-header-icon">
         <span class="icon">
@@ -13,7 +13,7 @@
       </header>
       <div class="card-content">
         <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          {{thisLesson.description}}
           <hr>
           <ul>
             <li *ngFor="let item of lessonItems">{{item.name}}</li>

@@ -13,7 +13,7 @@ export class LessonListDetailComponent implements OnInit {
     new LessonItem('Funny youtube video', 'This is a funny video', 'path'),
     new LessonItem('Info graphic', 'This is a chart', 'path')
   ];
-  thisLesson = {}
+  thisLesson
   constructor(private lessonService: LessonService) {}
 
   ngOnInit() {
