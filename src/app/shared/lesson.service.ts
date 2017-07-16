@@ -10,4 +10,7 @@ export class LessonService {
   getLessons() {
     return this.lessons.slice();
   }
+  getLessonsSelected() {
+    return this.lessonSelected
+  }
 }
