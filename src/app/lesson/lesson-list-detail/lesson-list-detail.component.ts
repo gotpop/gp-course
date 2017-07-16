@@ -18,17 +18,11 @@ export class LessonListDetailComponent implements OnInit {
 
   ngOnInit() {
     this.lessonService.lessonSelected.subscribe(
-      ( maLesson: Lesson ) => {
-        this.thisLesson = maLesson
+      ( SubscribedLesson: Lesson ) => {
+        this.thisLesson = SubscribedLesson;
         console.log('This is this lesson: ', this.thisLesson)
       }
     )
-
-
-    // this.lessonService
-
-    // this.thisLesson = this.lessonService.lessonSelected;
-
   }
 
 }
