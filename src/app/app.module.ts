@@ -22,7 +22,9 @@ const appRoutes: Routes = [
   { path: 'lesson', component: LessonComponent },
   { path: 'lesson/:id', component: LessonListDetailSingleComponent },
   { path: 'course', component: CourseComponent },
-  { path: 'profile', component: ProfileComponent}
+  { path: 'profile', component: ProfileComponent},
+  { path: 'not-found', component: PageNotFoundComponent},
+  { path: '**', redirectTo: '/not-found'}
 ];
 
 
