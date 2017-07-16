@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,19 +14,9 @@ import { LessonListDetailComponent } from './lesson/lesson-list-detail/lesson-li
 import { LessonItemComponent } from './lesson/lesson-list/lesson-item/lesson-item.component';
 import { CourseEditComponent } from './course/course-edit/course-edit.component';
 import {LessonService} from './shared/lesson.service';
-import {RouterModule, Routes} from '@angular/router';
 import { LessonListDetailSingleComponent } from './lesson/lesson-list-detail-single/lesson-list-detail-single.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'lesson', component: LessonComponent },
-  { path: 'lesson/:id', component: LessonListDetailSingleComponent },
-  { path: 'course', component: CourseComponent },
-  { path: 'profile', component: ProfileComponent},
-  { path: 'not-found', component: PageNotFoundComponent},
-  { path: '**', redirectTo: '/not-found'}
-];
 
 
 @NgModule({
@@ -45,8 +36,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [LessonService],
   bootstrap: [AppComponent]
