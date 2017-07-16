@@ -8,8 +8,8 @@ import {Lesson} from '../shared/lesson.model';
 })
 export class CourseComponent implements OnInit {
   public lessons: Lesson[] = [
-    new Lesson('Animals', 'This is a new animal lesson', 'Test'),
-    new Lesson('Robots', 'This is a new robot lesson', 'Test')
+    new Lesson('Animals', 'This is a new animal lesson', 'Test', []),
+    new Lesson('Robots', 'This is a new robot lesson', 'Test', [])
   ];
   constructor() { }
 

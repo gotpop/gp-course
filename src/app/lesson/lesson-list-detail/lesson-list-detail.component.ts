@@ -13,14 +13,14 @@ export class LessonListDetailComponent implements OnInit {
     new LessonItem('Funny youtube video', 'This is a funny video', 'path'),
     new LessonItem('Info graphic', 'This is a chart', 'path')
   ];
-  thisLesson
+  thisLesson;
   constructor(private lessonService: LessonService) {}
 
   ngOnInit() {
     this.lessonService.lessonSelected.subscribe(
       ( SubscribedLesson: Lesson ) => {
         this.thisLesson = SubscribedLesson;
-        console.log('This is this lesson: ', this.thisLesson)
+        console.log('This is the subscribed lesson: ', this.thisLesson)
       }
     )
   }
