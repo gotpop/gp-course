@@ -1,4 +1,3 @@
-import {ActivatedRoute} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {LessonService} from '../../shared/lesson.service';
 import {Lesson} from '../../shared/lesson.model';
@@ -13,20 +12,17 @@ export class LessonListDetailSingleComponent implements OnInit {
   thisLesson;
   localLessonItems;
 
-  constructor(private lessonService: LessonService, private route: ActivatedRoute) {
+  constructor(private lessonService: LessonService) {
   }
 
   ngOnInit() {
     this.lessonService.lessonSelected.subscribe(
       (SubscribedLesson: Lesson) => {
         this.thisLesson = SubscribedLesson;
-        console.log('Single page object: ', this.thisLesson)
         this.localLessonItems = SubscribedLesson.lessonItems;
         console.log('This is the subscribed lesson: ', this.thisLesson)
       }
     );
-
-    console.log(this.route.snapshot.params['id']);
   }
 
 }

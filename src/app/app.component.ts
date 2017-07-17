@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  mashow = false;
-  maClick() {
-    console.log('Ma click"');
-    const ma = this.mashow;
-    this.mashow = !ma
-  }
+
 }

@@ -20,7 +20,6 @@ export class LessonItemComponent implements OnInit {
   }
 
   onClick() {
-    // console.log('Clicked yay!', this.thisLesson)
     this.lessonService.lessonSelected.emit(this.thisLesson);
   }
 
