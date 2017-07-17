@@ -14,7 +14,12 @@ export class LessonListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.lessons = this.lessonService.getLessons();
+    // this.lessons = this.lessonService.getLessons();
+    this.lessonService.lessonsChanged.subscribe(
+      (lessons: Lesson[]) => {
+        this.lessons = lessons;
+      }
+    );
   }
 
   addNewLesson() {

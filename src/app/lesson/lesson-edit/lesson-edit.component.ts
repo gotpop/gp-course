@@ -17,8 +17,10 @@ export class LessonEditComponent implements OnInit {
 
   addLesson(form: NgForm) {
     const value = form.value;
-    const newLesson = new Lesson(value.name, value.description, 'Test', [])
+    const newLesson = new Lesson(value.name, value.description, 'Test', []);
     this.lessonService.addLesson(newLesson);
+
+
     console.log('Lesson added: ', newLesson);
   }
 
