@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {Lesson} from 'app/shared/lesson.model';
+import {LessonService} from '../../shared/lesson.service';
 
 @Component({
   selector: 'app-lesson-edit',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LessonEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private lessonService: LessonService) { }
 
   ngOnInit() {
+  }
+
+  addLesson(form: NgForm) {
+    const value = form.value;
+    const newLesson = new Lesson(value.name, value.description, 'Test', [])
+    this.lessonService.addLesson(newLesson);
+    console.log('Lesson added: ', newLesson);
   }
 
 }

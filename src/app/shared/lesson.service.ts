@@ -24,6 +24,10 @@ export class LessonService {
   getLessons() {
     return this.lessons.slice();
   }
+  addLesson(newLesson) {
+    this.lessons.push(newLesson);
+    // return this.lessons.slice();
+  }
   getLessonsSelected() {
     return this.lessonSelected
   }
