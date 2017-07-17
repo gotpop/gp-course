@@ -20,6 +20,7 @@ import {AuthService} from './auth.service';
 import {AuthGuard} from './auth-guard.service';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import { LessonEditComponent } from './lesson/lesson-edit/lesson-edit.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {HttpModule} from '@angular/http';
     LessonItemComponent,
     CourseEditComponent,
     LessonListDetailSingleComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LessonEditComponent
   ],
   imports: [
     BrowserModule,
