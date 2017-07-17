@@ -1,23 +1,12 @@
 import {EventEmitter} from '@angular/core';
 import {Lesson} from './lesson.model'
-import {LessonItem} from './lessonItem.model';
 import {Subject} from 'rxjs/Subject';
 
 export class LessonService {
   lessonSelected = new EventEmitter<Lesson>();
   lessonsChanged = new Subject<Lesson[]>();
-  private lessons: Lesson[] = [
-    new Lesson(
-      'Animals',
-      'This is a new animal lesson',
-      'Test', [
-        new LessonItem('Cat video', 'A video showing cats', 'Test'),
-        new LessonItem('Dog video', 'A video showing dogs', 'Test')
-      ])
-  ];
-  getLessons() {
-    return this.lessons.slice();
-  }
+  private lessons: Lesson[] = [];
+
   addLesson(newLesson) {
     this.lessons.push(newLesson);
     this.lessonsChanged.next(this.lessons.slice())

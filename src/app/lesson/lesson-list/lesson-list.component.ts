@@ -14,7 +14,6 @@ export class LessonListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.lessons = this.lessonService.getLessons();
     this.lessonService.lessonsChanged.subscribe(
       (lessons: Lesson[]) => {
         this.lessons = lessons;
@@ -24,6 +23,5 @@ export class LessonListComponent implements OnInit {
 
   addNewLesson() {
     this.showEdit = true;
-    // this.lessons.push(new Lesson('Animals', 'This is a new animal lesson', 'Test'))
   }
 }

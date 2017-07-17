@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import {LessonItem} from '../../shared/lessonItem.model';
+import {LessonItem} from '../../shared/lessonItem.model';
 import {LessonService} from '../../shared/lesson.service';
 import {Lesson} from '../../shared/lesson.model';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-lesson-list-detail',
@@ -16,18 +15,18 @@ export class LessonListDetailComponent implements OnInit {
   // ];
   thisLesson;
   localLessonItems;
-  constructor(private lessonService: LessonService, private route: ActivatedRoute) {}
+  constructor(private lessonService: LessonService) {}
 
   ngOnInit() {
+    // Init details component
+    this.thisLesson = new LessonItem('', '', '');
     this.lessonService.lessonSelected.subscribe(
       ( SubscribedLesson: Lesson ) => {
         this.thisLesson = SubscribedLesson;
         this.localLessonItems = SubscribedLesson.lessonItems;
         console.log('This is the subscribed lesson: ', this.thisLesson)
       }
-    )
-
-    console.log(this.route.snapshot.params['id'])
+    );
   }
 
 }
