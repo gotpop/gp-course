@@ -18,6 +18,8 @@ import { LessonListDetailSingleComponent } from './lesson/lesson-list-detail-sin
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {AuthService} from './auth.service';
 import {AuthGuard} from './auth-guard.service';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import {AuthGuard} from './auth-guard.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [LessonService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
