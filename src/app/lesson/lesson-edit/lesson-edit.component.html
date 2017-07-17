@@ -1,23 +1,33 @@
 <div class="columns">
   <div class="column">
     <form (ngSubmit)="addLesson(f)" #f="ngForm">
-      <label for="name">Name</label>
-      <input
-        class="input"
-        id="name"
-        name="name"
-        type="text"
-        ngModel
-      >
-      <label for="description">Description</label>
-      <input
-        class="input"
-        id="description"
-        name="description"
-        type="text"
-        ngModel
-      >
-      <button class="button" type="submit">Submit</button>
+      <div class="field">
+        <label for="name">Name</label>
+        <p class="control">
+          <input
+            class="input"
+            id="name"
+            name="name"
+            type="text"
+            ngModel
+          >
+        </p>
+      </div>
+      <div class="field">
+        <label for="description">Description</label>
+        <p class="control">
+          <input
+            class="input"
+            id="description"
+            name="description"
+            type="text"
+            ngModel
+          >
+        </p>
+      </div>
+      <p class="control">
+        <button class="button is-large" type="submit">Submit</button>
+      </p>
     </form>
   </div>
 </div>

@@ -1,34 +1,42 @@
-<div class="columns">
-  <div class="column">
-    <hr>
-    <h3 class="title">List of courses</h3>
-    <app-course-edit></app-course-edit>
-  </div>
-</div>
-<div class="columns" *ngFor="let item of lessons">
-  <div class="column">
-    <hr>
-    <div class="card">
-      <div class="card-content">
-        <p class="title">
-          {{item.name}}
-        </p>
-        <p class="subtitle">
-          {{item.description}}
-        </p>
-      </div>
-      <footer class="card-footer">
-        <p class="card-footer-item">
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="columns">
+          <div class="column">
+            <hr>
+            <h3 class="title">List of courses</h3>
+            <app-course-edit></app-course-edit>
+          </div>
+        </div>
+        <div class="columns" *ngFor="let item of lessons">
+          <div class="column">
+            <hr>
+            <div class="card">
+              <div class="card-content">
+                <p class="title">
+                  {{item.name}}
+                </p>
+                <p class="subtitle">
+                  {{item.description}}
+                </p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
       <span>
        <a>Edit</a>
       </span>
-        </p>
-        <p class="card-footer-item">
+                </p>
+                <p class="card-footer-item">
       <span>
         <a href="#">Edit</a>
       </span>
-        </p>
-      </footer>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>

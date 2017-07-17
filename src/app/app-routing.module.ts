@@ -8,6 +8,7 @@ import {CourseComponent} from './course/course.component';
 import {ProfileComponent} from './profile/profile.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {AuthGuard} from './auth-guard.service';
+import {LoginComponent} from './login/login.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'lesson/:id', component: LessonListDetailSingleComponent },
   { path: 'course', component: CourseComponent },
   { path: 'profile', component: ProfileComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'not-found', component: PageNotFoundComponent},
   { path: '**', redirectTo: '/not-found'}
 ];

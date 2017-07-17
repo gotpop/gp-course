@@ -9,22 +9,12 @@ import {AuthService} from '../auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   goLessons() {
     this.router.navigate(['lesson'])
-  }
-
-  onLogIn() {
-    console.log('Logged in!')
-    this.authService.login();
-  }
-
-  onLogOut() {
-    console.log('Logged out!')
-    this.authService.logout();
   }
 }

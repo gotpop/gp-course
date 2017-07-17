@@ -1,10 +1,15 @@
 <div class="columns">
   <div class="column">
     <button class="button is-success" (click)="addNewLesson()">New Lesson</button>
+  </div>
+</div>
+<div class="columns">
+  <div class="column">
     <app-lesson-edit *ngIf="showEdit"></app-lesson-edit>
   </div>
 </div>
 <app-lesson-item
-  *ngFor="let lesson of lessons" [thisLesson]="lesson"></app-lesson-item>
+  *ngFor="let lesson of lessons"
+  [thisLesson]="lesson"></app-lesson-item>
 
 
