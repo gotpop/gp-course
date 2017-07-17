@@ -9,6 +9,7 @@ import {LessonService} from '../../shared/lesson.service';
 })
 export class LessonListComponent implements OnInit {
   lessons: Lesson[];
+  showEdit = false;
   constructor(private lessonService: LessonService) {
   }
 
@@ -17,6 +18,7 @@ export class LessonListComponent implements OnInit {
   }
 
   addNewLesson() {
+    this.showEdit = true;
     // this.lessons.push(new Lesson('Animals', 'This is a new animal lesson', 'Test'))
   }
 }

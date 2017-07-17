@@ -1,6 +1,7 @@
 <div class="columns">
   <div class="column">
     <button class="button is-success" (click)="addNewLesson()">New Lesson</button>
+    <app-lesson-edit *ngIf="showEdit"></app-lesson-edit>
   </div>
 </div>
 <app-lesson-item
