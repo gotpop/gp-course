@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LessonService} from '../../shared/lesson.service';
 import {Lesson} from '../../shared/lesson.model';
+import {LessonItem} from '../../shared/lessonItem.model';
 
 @Component({
   selector: 'app-lesson-list-detail-single',
@@ -9,20 +10,12 @@ import {Lesson} from '../../shared/lesson.model';
 })
 
 export class LessonListDetailSingleComponent implements OnInit {
-  thisLesson;
-  localLessonItems;
 
-  constructor(private lessonService: LessonService) {
-  }
+  thisLesson;
+  constructor(private lessonService: LessonService) {}
 
   ngOnInit() {
-    this.lessonService.lessonSelected.subscribe(
-      (SubscribedLesson: Lesson) => {
-        this.thisLesson = SubscribedLesson;
-        this.localLessonItems = SubscribedLesson.lessonItems;
-        console.log('This is the subscribed lesson: ', this.thisLesson)
-      }
-    );
+   this.thisLesson = this.lessonService.getSelected()
   }
 
 }

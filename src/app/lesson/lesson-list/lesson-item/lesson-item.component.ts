@@ -19,12 +19,14 @@ export class LessonItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick() {
-    this.lessonService.lessonSelected.emit(this.thisLesson);
+  onViewLocal() {
+    /* Reactive approach */
+    this.lessonService.lessonSelected.next(this.thisLesson);
   }
 
-  viewSingle() {
-    this.lessonService.lessonSelected.emit(this.thisLesson);
+  onViewSingle() {
+    /* Static approach */
+    this.lessonService.lessonSelectedStatic = this.thisLesson;
     this.router.navigate([this.thisLesson.name], {relativeTo: this.route} )
   }
 }

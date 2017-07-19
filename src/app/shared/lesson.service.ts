@@ -3,13 +3,17 @@ import {Lesson} from './lesson.model'
 import {Subject} from 'rxjs/Subject';
 
 export class LessonService {
-  lessonSelected = new EventEmitter<Lesson>();
+  lessonSelected = new Subject<Lesson>();
+  lessonSelectedStatic;
   lessonsChanged = new Subject<Lesson[]>();
   private lessons: Lesson[] = [];
 
   addLesson(newLesson) {
     this.lessons.push(newLesson);
     this.lessonsChanged.next(this.lessons.slice())
+  }
+  getSelected() {
+    return this.lessonSelectedStatic;
   }
 }
 
