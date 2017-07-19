@@ -10,6 +10,7 @@
             name="name"
             type="text"
             ngModel
+            required
           >
         </p>
       </div>
@@ -22,11 +23,17 @@
             name="description"
             type="text"
             ngModel
+            required
           >
         </p>
       </div>
       <p class="control">
-        <button class="button is-large" type="submit">Submit</button>
+        <button [disabled]="!f.valid" class="button is-large" type="submit">
+          <span>Submit</span>
+          <span class="icon">
+            <i class="fa fa-send"></i>
+          </span>
+        </button>
       </p>
     </form>
   </div>
