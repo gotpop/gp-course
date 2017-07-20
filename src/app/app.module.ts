@@ -13,17 +13,18 @@ import { LessonListComponent } from './lesson/lesson-list/lesson-list.component'
 import { LessonListDetailComponent } from './lesson/lesson-list-detail/lesson-list-detail.component';
 import { LessonItemComponent } from './lesson/lesson-list/lesson-item/lesson-item.component';
 import { CourseEditComponent } from './course/course-edit/course-edit.component';
-import {LessonService} from './shared/lesson.service';
+import { LessonService } from './shared/lesson.service';
 import { LessonListDetailSingleComponent } from './lesson/lesson-list-detail-single/lesson-list-detail-single.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {AuthService} from './auth.service';
-import {AuthGuard} from './auth-guard.service';
-import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { LessonEditComponent } from './lesson/lesson-edit/lesson-edit.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { LessonAddComponent } from './lesson/lesson-add/lesson-add.component';
+import { DragulaModule } from 'ng2-dragula';
 
 
 
@@ -51,7 +52,8 @@ import { LessonAddComponent } from './lesson/lesson-add/lesson-add.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    DragulaModule
   ],
   providers: [LessonService, AuthService, AuthGuard],
   bootstrap: [AppComponent]

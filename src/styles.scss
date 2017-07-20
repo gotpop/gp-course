@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bulma";
 @import "~font-awesome/css/font-awesome.css";
+@import "~dragula/dist/dragula.css";
+
 
 input.ng-invalid.ng-touched {
   border: 1px red solid;

@@ -1,5 +1,14 @@
 <section class="section">
   <div class="container">
+    <div class='columns'>
+      <div class='column' *ngFor='let group of groups' [dragula]='"nested-bag"'>
+        <div class="box" *ngFor='let item of group.items' [innerHtml]='item.name'></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
     <div class="columns">
       <div class="column">
         <div class="columns">
@@ -23,14 +32,14 @@
               </div>
               <footer class="card-footer">
                 <p class="card-footer-item">
-      <span>
-       <a>Edit</a>
-      </span>
+                <span>
+                 <a>Edit</a>
+                </span>
                 </p>
                 <p class="card-footer-item">
-      <span>
-        <a href="#">Edit</a>
-      </span>
+                  <span>
+                    <a href="#">Edit</a>
+                  </span>
                 </p>
               </footer>
             </div>
