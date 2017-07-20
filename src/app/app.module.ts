@@ -22,6 +22,10 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import { LessonEditComponent } from './lesson/lesson-edit/lesson-edit.component';
 import { LoginComponent } from './login/login.component';
+import { SearchComponent } from './search/search.component';
+import { LessonAddComponent } from './lesson/lesson-add/lesson-add.component';
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +43,9 @@ import { LoginComponent } from './login/login.component';
     LessonListDetailSingleComponent,
     PageNotFoundComponent,
     LessonEditComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent,
+    LessonAddComponent
   ],
   imports: [
     BrowserModule,

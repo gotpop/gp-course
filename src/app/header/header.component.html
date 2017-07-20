@@ -7,7 +7,23 @@
         </a>
       </div>
       <a class="nav-item" routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a class="nav-item" routerLink="/lesson" routerLinkActive="is-active">Lesson</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="nav-item">Lesson</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/lesson/add" routerLinkActive="is-active">
+            Add new Lesson
+          </a>
+          <a class="navbar-item" routerLink="/lesson" routerLinkActive="is-active">
+            Lesson
+          </a>
+          <hr class="navbar-divider">
+          <div class="navbar-item">
+            Lesson section
+          </div>
+        </div>
+      </div>
+
       <a class="nav-item" routerLink="/course" routerLinkActive="is-active">Course</a>
       <a class="nav-item" routerLink="/profile" routerLinkActive="is-active">Profile</a>
     </div>

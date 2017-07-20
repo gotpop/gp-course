@@ -1,0 +1,17 @@
+<input
+  class="input is-large" (keyup)="searchTerm$.next($event.target.value)" placeholder="Search">
+
+<ul *ngIf="results">
+  <li *ngFor="let result of results | slice:0:9">
+    <div class="box">
+      <div class="columns">
+        <div class="column">
+          {{ result.name }}
+        </div>
+        <div class="column">
+          <button class="button" (click)="addToLesson(result)">Add to lesson</button>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
