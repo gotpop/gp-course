@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {LessonService} from '../../shared/lesson.service';
-import {Lesson} from '../../shared/lesson.model';
-import {LessonItem} from '../../shared/lessonItem.model';
+import { LessonService } from '../../shared/lesson.service';
+
 
 @Component({
   selector: 'app-lesson-list-detail-single',

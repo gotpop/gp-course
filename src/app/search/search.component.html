@@ -1,17 +1,19 @@
-<input
-  class="input is-large" (keyup)="searchTerm$.next($event.target.value)" placeholder="Search">
+<div class="columns">
+  <div class="column">
+    <input
+      class="input is-large" (keyup)="searchTerm$.next($event.target.value)" placeholder="Search">
+  </div>
+</div>
 
-<ul *ngIf="results">
-  <li *ngFor="let result of results | slice:0:9">
-    <div class="box">
+<div *ngIf="results">
+  <div class="notification box" *ngFor="let result of results | slice:0:9">
       <div class="columns">
         <div class="column">
           {{ result.name }}
         </div>
         <div class="column">
-          <button class="button" (click)="addToLesson(result)">Add to lesson</button>
+          <button class="button is-pulled-right" (click)="addToLesson(result)">Add to lesson</button>
         </div>
       </div>
-    </div>
-  </li>
-</ul>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from './search.service';
 import { Subject } from 'rxjs/Subject';
+import {LessonService} from '../shared/lesson.service';
 
 @Component({
   selector: 'app-search',
@@ -13,7 +14,7 @@ export class SearchComponent {
   results: Object;
   searchTerm$ = new Subject<string>();
 
-  constructor(private searchService: SearchService) {
+  constructor(private searchService: SearchService, private lessonService: LessonService) {
     this.searchService.search(this.searchTerm$)
       .subscribe(results => {
         this.results = results.results;
@@ -21,7 +22,8 @@ export class SearchComponent {
   }
 
   addToLesson(result) {
-    console.log('Search result: ', result);
+    this.lessonService.addCDN(result);
+    console.log('Search result: ', this.lessonService.lessonCDN);
   }
 
 }

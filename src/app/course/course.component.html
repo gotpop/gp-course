@@ -2,7 +2,16 @@
   <div class="container">
     <div class='columns'>
       <ul class="column" [dragula]='"bag-one"' [dragulaModel]='groups'>
-        <li class="box notification {{item.class}}" *ngFor="let item of groups">{{item.name}}</li>
+        <li class="notification {{item.class}}" *ngFor="let item of groups; let i = index">
+          <div class="columns">
+            <div class="column">
+              {{ item.name }}
+            </div>
+            <div class="column">
+              <button class="button is-pulled-right" (click)="onDelete(i)">Delete</button>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>

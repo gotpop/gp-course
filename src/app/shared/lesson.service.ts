@@ -7,11 +7,17 @@ export class LessonService {
   lessonSelectedStatic;
   lessonsChanged = new Subject<Lesson[]>();
   private lessons: Lesson[] = [];
+  lessonCDN = [];
 
   addLesson(newLesson) {
     this.lessons.push(newLesson);
     this.lessonsChanged.next(this.lessons.slice())
   }
+
+  addCDN(Obj) {
+    this.lessonCDN.push(Obj);
+  }
+
   getSelected() {
     return this.lessonSelectedStatic;
   }
