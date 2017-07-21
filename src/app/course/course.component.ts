@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Lesson} from '../shared/lesson.model';
+import {Component, OnInit} from '@angular/core';
+import {DragulaService} from 'ng2-dragula';
 
 @Component({
   selector: 'app-course',
@@ -7,25 +7,45 @@ import {Lesson} from '../shared/lesson.model';
   styleUrls: ['./course.component.scss']
 })
 export class CourseComponent implements OnInit {
-  public lessons: Lesson[] = [
-    new Lesson('Animals', 'This is a new animal lesson', 'Test', []),
-    new Lesson('Robots', 'This is a new robot lesson', 'Test', [])
-  ];
+
   public groups: Array<any> = [
-    {
-      name: 'Group A',
-      items: [{name: 'Item A'},{name: 'Item B'},{name: 'Item C'},{name: 'Item D'}]
+    { name: 'Item A',
+      class: 'is-danger'
     },
-    {
-      name: 'Group B',
-      items: [{name: 'Item 1'},{name: 'Item 2'},{name: 'Item 3'},{name: 'Item 4'}]
+    {name: 'Item B',
+      class: 'is-warning'
+    },
+    {name: 'Item C',
+      class: 'is-success'
+    },
+    {name: 'Item D',
+      class: 'is-primary'
     }
   ];
-  constructor() { }
 
-  ngOnInit() {
+  constructor(private dragulaService: DragulaService) {
+    dragulaService.dropModel.subscribe((value) => {
+      console.log('Drag Value: ', this.groups)
+      this.onDropModel(value.slice(1));
+
+    });
+    dragulaService.removeModel.subscribe((value) => {
+      this.onRemoveModel(value.slice(1));
+    });
   }
 
+  ngOnInit() {
 
+  }
+
+  private onDropModel(args) {
+    let [el, target, source] = args;
+    // do something else
+  }
+
+  private onRemoveModel(args) {
+    let [el, source] = args;
+    // do something else
+  }
 
 }
